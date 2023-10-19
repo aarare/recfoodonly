@@ -1,10 +1,6 @@
-﻿click==8.1.7
-colorama==0.4.6
 findspark==2.0.1
 Flask==3.0.0
 gunicorn==21.2.0
-importlib-metadata==6.8.0
-itsdangerous==2.1.2
 Jinja2==3.1.2
 joblib==1.3.2
 MarkupSafe==2.1.3
@@ -12,14 +8,6 @@ numpy==1.26.1
 pandas==2.1.1
 py4j==0.10.9.7
 pyspark==3.5.0
-python-dateutil==2.8.2
-pytz==2023.3.post1
-scikit-learn==1.3.1
-scipy==1.11.3
-six==1.16.0
-sklearn==0.0
-typing-extensions==4.8.0
 Werkzeug==3.0.0
-zipp==3.17.0
 psycopg2==2.9.9
 pyarrow==13.0.0
