@@ -22,4 +22,4 @@ typing-extensions==4.8.0
 Werkzeug==3.0.0
 zipp==3.17.0
 psycopg2==2.9.9
-pyarrow=13.0.0
+pyarrow==13.0.0
