@@ -1,0 +1,27 @@
+.table {
+    display: inline-block;
+    border-spacing: 0;
+    margin: 1rem;
+    background-color: #f5f5f5;
+    font-size: 0.75em;
+}
+
+.table__row:nth-child(even) {
+    background-color: #e5e5e5;
+
+}
+
+.table__header{
+    text-align:left;
+}
+
+.table__cell {
+    padding: 8px;
+}
+.panel {
+  padding: 50px;
+  display: none;
+  text-align: center;
+  background-color: #e5eecc;
+  border: solid 1px #c3c3c3;
+}

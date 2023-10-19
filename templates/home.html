@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Food Recommendation System</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.0/css/bulma.min.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        html{
+            overflow: hidden;
+        }
+
+        body{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            background-image: url('/static/backpic.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+
+        #login-form-container{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        fieldset {
+            text-align: center; }
+
+    </style>
+</head>
+<body>
+    <div id="login-form-container">
+        <div class="card" style="width: 550px">
+                <div class="card-content">
+                    <form action="predict" method="POST">
+                        <div class="content">
+                            <div class="is-size-6 has-text-centered" style="color: black"><h2>Food Recommendation System</h2></div><br>
+                            {% block body %}
+                            <form name="passdata">
+                              <fieldset>
+                                <legend style="color: black">What kind of food do you like? Let's Rate!</legend><br>
+                                <p>
+                                  <label for="food1"></label>
+                                  <select id = "food1" name="food1">
+                                    {% for food in list %}
+                                      <option value = "{{food}}">{{food}}</option>
+                                    {% endfor %}
+                                  </select>
+                                  <label for="rate1">Rate </label>
+                                  <select id = "rate1" name="rate1">
+                                    <option value = 1>1</option>
+                                    <option value = 2>2</option>
+                                    <option value = 3>3</option>
+                                    <option value = 4>4</option>
+                                    <option value = 5>5</option>
+                                  </select><br><br>
+
+                                <label for="food2"></label>
+                                  <select id = "food2" name="food2">
+                                    {% for food in list %}
+                                      <option value = "{{food}}">{{food}}</option>
+                                    {% endfor %}
+                                  </select>
+                                  <label for="rate2">Rate </label>
+                                  <select id = "rate2" name="rate2">
+                                    <option value = 1>1</option>
+                                    <option value = 2>2</option>
+                                    <option value = 3>3</option>
+                                    <option value = 4>4</option>
+                                    <option value = 5>5</option>
+                                  </select><br><br>
+
+                                <label for="food3"></label>
+                                  <select id = "food3" name="food3">
+                                    {% for food in list %}
+                                      <option value = "{{food}}">{{food}}</option>
+                                    {% endfor %}
+                                  </select>
+                                  <label for="rate3">Rate </label>
+                                  <select id = "rate3" name="rate3">
+                                    <option value = 1>1</option>
+                                    <option value = 2>2</option>
+                                    <option value = 3>3</option>
+                                    <option value = 4>4</option>
+                                    <option value = 5>5</option>
+                                  </select><br><br>
+
+                                <label for="food4"></label>
+                                  <select id = "food4" name="food4">
+                                    {% for food in list %}
+                                      <option value = "{{food}}">{{food}}</option>
+                                    {% endfor %}
+                                  </select>
+                                  <label for="rate4">Rate </label>
+                                  <select id = "rate4" name="rate4">
+                                    <option value = 1>1</option>
+                                    <option value = 2>2</option>
+                                    <option value = 3>3</option>
+                                    <option value = 4>4</option>
+                                    <option value = 5>5</option>
+                                  </select><br><br>
+
+                                <label for="food5"></label>
+                                  <select id = "food5" name="food5">
+                                    {% for food in list %}
+                                      <option value = "{{food}}">{{food}}</option>
+                                    {% endfor %}
+                                  </select>
+                                  <label for="rate5">Rate </label>
+                                  <select id = "rate5" name="rate5">
+                                    <option value = 1>1</option>
+                                    <option value = 2>2</option>
+                                    <option value = 3>3</option>
+                                    <option value = 4>4</option>
+                                    <option value = 5>5</option>
+                                  </select><br>
+                                {% endblock %}
+                                  <br>
+                                  <br>
+                                    <h5>If you wish, you can check out the foods above at <p><a href="https://www.AllRecipes.com" target="_blank" style="color: black"><u>AllRecipes!</u></a></p></h5>
+
+                                   <div class="field">
+                                    <button class="button is-fullwidth is-rounded is-success" style="background-color: crimson">Recommend me!</button><br><br>
+                                   </div>
+                              </fieldset>
+                            </form>
+                </div>
+          </form>
+        </div>
+    </div>
+    </div>
+</body>
+</html>
+
