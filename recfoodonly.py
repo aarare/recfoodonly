@@ -7,8 +7,6 @@ from pyspark.ml.feature import StringIndexer
 from pyspark.ml import Pipeline as PL
 import findspark
 
-server = app.server
-
 findspark.init()
 
 app = Flask(__name__)
