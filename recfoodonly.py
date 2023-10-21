@@ -70,7 +70,7 @@ def predict():
             print(transformed_try)
 
             model = ALS(userCol='userid', itemCol='food_name_index', ratingCol='stars', seed=42,
-                        rank=50, maxIter=20, regParam=0.03, nonnegative=True, implicitPrefs=False, coldStartStrategy='drop')
+                        rank=50, maxIter=10, regParam=0.03, nonnegative=True, implicitPrefs=False, coldStartStrategy='drop')
             print(model)
 
             als_new_user = model.fit(transformed_try.dropna())
